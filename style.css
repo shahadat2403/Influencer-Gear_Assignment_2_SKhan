@@ -1,33 +1,32 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 /* Common Style */
 body{
     font-family: 'Roboto', sans-serif;
-    width: 1440px;
-    height: 1662px;
-    background-color: #ececec;
+        background-color: #ececec;
     }
-/* h2, p, h3{
-    margin: 0px;
-} */
-.container{
-        margin-left: 120px;
-        margin-right: 120px;
-        }
+.container{ 
+    width: 1440px;
+    margin: auto;  
+    /* margin-left: 120px;
+    margin-right: 120px; */
+}
 /*----Header Style----*/
 .header{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
     box-sizing: border-box;
-    width: 1440px;
+    
     background-color: rgba(241, 241, 241, 0.939);  
 }
-nav ul{
+.navbar ul{
     display: flex;
     font-weight: bold;
     font-size: large;
     }
-nav li{
+.navbar-2{
     list-style: none;
     margin: 10px;
 }
@@ -87,6 +86,7 @@ button p{
     width: 40%;
     height: 40%;
 }
+
 /* Popular Collection Stlye */
 .Products{
     display: grid;
@@ -119,7 +119,6 @@ button p{
     margin-bottom: 6px;
     /* line-height: 40px;  */
 }
-
 .price{
     font-size: 24px;
     color: black;
@@ -143,4 +142,100 @@ button p{
     font-size: 14px;
     line-height: 20px;
 }
+.see_more{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: #E02C6D;
+    margin-left: 1050px; 
+}
 
+/* Featured products */
+.FP{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.img_S{
+    width: 404px;
+    height: 270px;
+}
+.featured{
+    font-size: 38px;
+}
+.f_description{
+    font-size: 18px;
+}
+
+/* Footer */
+footer{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    background:black;
+    height: 150px;
+    width: 100vw;
+}
+.footer_heading{
+    font-size: 25px;
+    color: rgb(223, 210, 191);
+    text-align: center;
+}
+.copyright{
+    font-size: 15px;
+    color: rgb(223, 210, 191);
+    text-align: center;
+}
+.f_icon{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   justify-content: center;
+   margin: 0px 16px;
+   color: cadetblue;
+}
+
+/* Media Queries */
+/* Mobile devices */
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+        /* margin-left: 0px;
+        margin-right: 0px */
+    }
+   .header, .start-journey, .line, .pc, .Products, .FP{
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+    .SJI{
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+    }
+    .see_more{
+        margin-left:0px;
+    }
+    footer{
+        position: relative;
+       
+    }
+}
+/* tablet devices */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+        /* margin-left: 0px;
+        margin-right: 0px */
+    }
+   .header, .start-journey, .line, .pc, .Products, .FP{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .see_more{
+        margin-left:0px;
+    }
+}
